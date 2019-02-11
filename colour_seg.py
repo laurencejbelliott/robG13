@@ -26,7 +26,7 @@ class image_converter:
             print e
 
         bgr_thresh = cv2.inRange(cv_image,
-                                 numpy.array((0, 0, 70)),
+                                 numpy.array((0, 0, 25)),
                                  numpy.array((20, 20, 255)))
 
         hsv_img = cv2.cvtColor(cv_image, cv2.COLOR_BGR2HSV)
@@ -44,7 +44,7 @@ class image_converter:
             cv2.CHAIN_APPROX_SIMPLE)
         for c in bgr_contours:
             a = cv2.contourArea(c)
-            if a > 100.0:
+            if a > 0.001:
                 cv2.drawContours(cv_image, c, -1, (0, 255, 0))
 
         _, hsv_contours, hierachy = cv2.findContours(
