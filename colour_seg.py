@@ -20,6 +20,7 @@ class image_converter:
 
     def callback(self, data):
         cv2.namedWindow("Image window", 1)
+        cv2.namedWindow("Thresholded image window", 2)
         try:
             cv_image = self.bridge.imgmsg_to_cv2(data, "bgr8")
         except CvBridgeError, e:
@@ -34,9 +35,9 @@ class image_converter:
                                  numpy.array((0, 90, 0)),
                                  numpy.array((360, 100, 250)))
 
-        print numpy.mean(hsv_img[:, :, 0])
-        print numpy.mean(hsv_img[:, :, 1])
-        print numpy.mean(hsv_img[:, :, 2])
+        # print numpy.mean(hsv_img[:, :, 0])
+        # print numpy.mean(hsv_img[:, :, 1])
+        # print numpy.mean(hsv_img[:, :, 2])
 
         _, bgr_contours, hierachy = cv2.findContours(
             bgr_thresh.copy(),
@@ -57,6 +58,11 @@ class image_converter:
                 cv2.drawContours(cv_image, c, -1, (255, 0, 0))
         print '===='
         cv2.imshow("Image window", cv_image)
+
+        threshImg = cv2.bitwise_and(cv_image, cv_image, mask=bgr_thresh)
+        cv2.imshow("Thresholded image window", threshImg)
+        print(numpy.mean(threshImg[:,:,2]))
+
         cv2.waitKey(1)
 
 
