@@ -16,4 +16,5 @@ A repository for the collaboration of group 13 in completing workshop tasks for 
 * `catkin create`
 4. Setup environment variables for your terminal (do this for each new terminal that you want to use to interact with the robot simulation) with `source ~/workspace/devel/setup.bash`
 5. Launch the simulation of the turtlebot, including `roscore` and `gazebo` with the command `roslaunch turtlebot_gazebo turtlebot_world.launch world_file:=$(rospack find turtlebot_gazebo)/worlds/empty.world`.
-6. Open a new terminal and repeat step 4 before running any Python scripts, either directly with `python <name of python file>`, or via an IDE such as Spyder e.g. `spyder <name of python file>`.
+6. To interact with the simulation via `rviz`, run `roslaunch turtlebot_rviz_launchers view_robot.launch`.
+7. Open a new terminal and repeat step 4 before running any Python scripts, either directly with `python <name of python file>`, or via an IDE such as Spyder e.g. `spyder <name of python file>`.
