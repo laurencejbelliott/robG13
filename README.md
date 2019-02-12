@@ -18,3 +18,11 @@ A repository for the collaboration of group 13 in completing workshop tasks for 
 5. Launch the simulation of the turtlebot, including `roscore` and `gazebo` with the command `roslaunch turtlebot_gazebo turtlebot_world.launch world_file:=$(rospack find turtlebot_gazebo)/worlds/empty.world`.
 6. To interact with the simulation via `rviz`, run `roslaunch turtlebot_rviz_launchers view_robot.launch`.
 7. Open a new terminal and repeat step 4 before running any Python scripts, either directly with `python <name of python file>`, or via an IDE such as Spyder e.g. `spyder <name of python file>`.
+
+# Running on the robot
+1. Download `ros-network.sh` and `rpi.ovpn` from this repository.  These files have been edited to match the ip address of our robot.  The rpi.ovpn file was previously available from the web server hosted on the raspberry pi, but required modification to match the ip address of the robot.
+2. Run the vpn client: `sudo openvpn <filepath>/rpi.ovpn`.  This vpn must be kept running.  The pc is now connected to the robot via a vpn.  The robot has the address 192.168.2.1.
+3. For ros commands to be run on the robot, not the local pc, a few environment variables have to be set so ros knows where to run these commands.  This is the purpose of ros-network.sh.  It's a bash script that will set these environment variables up.  In each terminal that we want to use to run commands on the robot, we need to source those environment variables using the script: `source ~/ros-network.sh 192.168.2.1`.  
+4. You can verify that this has worked successfully by running `rostopic list`.  `roslaunch turtlebot_rviz_launchers view_robot.launch` will launch rviz, which should show us the view from the kinect on the robot.
+5. Starting spyder in this terminal should actually cause any code run through spyder to work on the robot.
+
