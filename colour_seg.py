@@ -30,28 +30,6 @@ class image_converter:
                                  numpy.array((60, 0, 25)),
                                  numpy.array((75, 120, 255)))
 
-        hsv_img = cv2.cvtColor(cv_image, cv2.COLOR_BGR2HSV)
-        hsv_thresh = cv2.inRange(hsv_img,
-                                 numpy.array((0, 90, 0)),
-                                 numpy.array((360, 100, 250)))
-
-        _, bgr_contours, hierachy = cv2.findContours(
-            bgr_thresh.copy(),
-            cv2.RETR_TREE,
-            cv2.CHAIN_APPROX_SIMPLE)
-        for c in bgr_contours:
-            a = cv2.contourArea(c)
-            if a > 0.001:
-                cv2.drawContours(cv_image, c, -1, (0, 255, 0))
-
-        _, hsv_contours, hierachy = cv2.findContours(
-            hsv_thresh.copy(),
-            cv2.RETR_TREE,
-            cv2.CHAIN_APPROX_SIMPLE)
-        for c in hsv_contours:
-            a = cv2.contourArea(c)
-            if a > 100.0:
-                cv2.drawContours(cv_image, c, -1, (255, 0, 0))
         cv2.imshow("Image window", cv_image)
 
         threshImg = cv2.bitwise_and(cv_image, cv_image, mask=bgr_thresh)
