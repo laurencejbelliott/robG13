@@ -1,0 +1,8 @@
+Symlinking /home/loz/robG13/devel/./_setup_util.py
+Symlinking /home/loz/robG13/devel/./setup.sh
+Symlinking /home/loz/robG13/devel/./env.sh
+Symlinking /home/loz/robG13/devel/./setup.zsh
+Symlinking /home/loz/robG13/devel/./setup.bash
+Symlinking /home/loz/robG13/devel/share/catkin_tools_prebuild/cmake/catkin_tools_prebuildConfig-version.cmake
+Symlinking /home/loz/robG13/devel/share/catkin_tools_prebuild/cmake/catkin_tools_prebuildConfig.cmake
+Symlinking /home/loz/robG13/devel/lib/pkgconfig/catkin_tools_prebuild.pc
