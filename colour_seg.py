@@ -27,8 +27,8 @@ class image_converter:
             print e
 
         bgr_thresh = cv2.inRange(cv_image,
-                                 numpy.array((0, 0, 25)),
-                                 numpy.array((20, 20, 255)))
+                                 numpy.array((60, 0, 25)),
+                                 numpy.array((75, 120, 255)))
 
         hsv_img = cv2.cvtColor(cv_image, cv2.COLOR_BGR2HSV)
         hsv_thresh = cv2.inRange(hsv_img,
