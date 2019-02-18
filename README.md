@@ -12,8 +12,10 @@ A repository for the collaboration of group 13 in completing workshop tasks for 
 2. Run `sudo apt-get update && sudo apt-get upgrade && sudo apt-get install ros-kinetic-uol-cmp3103m` to ensure that packages are up-to-date, and that the correct course specific packages are installed.
 3. Create a catkin workspace with the following commands:
 * `mkdir -p ~/workspace/src`
-* `cd ~/workspace`
-* `catkin create`
+* `cd ~/workspace/src`
+* `catkin_init_workspace`
+* `cd ..`
+* `catkin_make`
 4. Setup environment variables for your terminal (do this for each new terminal that you want to use to interact with the robot simulation) with `source ~/workspace/devel/setup.bash`
 5. Launch the simulation of the turtlebot, including `roscore` and `gazebo` with the command `roslaunch turtlebot_gazebo turtlebot_world.launch world_file:=$(rospack find turtlebot_gazebo)/worlds/empty.world`.
 6. To interact with the simulation via `rviz`, run `roslaunch turtlebot_rviz_launchers view_robot.launch`.
