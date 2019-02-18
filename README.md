@@ -23,8 +23,9 @@ A repository for the collaboration of group 13 in completing workshop tasks for 
 
 # Running on the robot
 1. Download `ros-network.sh` and `rpi.ovpn` from this repository.  These files have been edited to match the ip address of our robot.  The rpi.ovpn file was previously available from the web server hosted on the raspberry pi, but required modification to match the ip address of the robot.
-2. Run the vpn client: `sudo openvpn <filepath>/rpi.ovpn`.  This vpn must be kept running.  The pc is now connected to the robot via a vpn.  The robot has the address 192.168.2.1.
-3. For ros commands to be run on the robot, not the local pc, a few environment variables have to be set so ros knows where to run these commands.  This is the purpose of ros-network.sh.  It's a bash script that will set these environment variables up.  In each terminal that we want to use to run commands on the robot, we need to source those environment variables using the script: `source ~/ros-network.sh 192.168.2.1`.  
-4. You can verify that this has worked successfully by running `rostopic list`.  `roslaunch turtlebot_rviz_launchers view_robot.launch` will launch rviz, which should show us the view from the kinect on the robot.
-5. Starting spyder in this terminal should actually cause any code run through spyder to work on the robot.
+2. Connect to the web server hosted on the raspberry pi in browser.  The ip address is http://10.82.0.103/.  From here, go into the tmule control and start the turtlebot and roscore services.  If the later steps don't work, click the check button to ensure that they're running properly.
+3. Run the vpn client: `sudo openvpn <filepath>/rpi.ovpn`.  This vpn must be kept running.  The pc is now connected to the robot via a vpn.  The robot has the address 192.168.2.1.
+4. For ros commands to be run on the robot, not the local pc, a few environment variables have to be set so ros knows where to run these commands.  This is the purpose of ros-network.sh.  It's a bash script that will set these environment variables up.  In each terminal that we want to use to run commands on the robot, we need to source those environment variables using the script: `source ~/ros-network.sh 192.168.2.1`.  
+5. You can verify that this has worked successfully by running `rostopic list`.  `roslaunch turtlebot_rviz_launchers view_robot.launch` will launch rviz, which should show us the view from the kinect on the robot.
+6. Starting spyder in this terminal should actually cause any code run through spyder to work on the robot.
 
