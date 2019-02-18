@@ -27,8 +27,8 @@ class image_converter:
             print e
 
         bgr_thresh = cv2.inRange(cv_image,
-                                 numpy.array((0, 50, 100)),
-                                 numpy.array((20, 65, 120)))
+                                 numpy.array((0, 0, 50)),
+                                 numpy.array((20, 20, 255)))
 
         cv2.imshow("Image window", cv_image)
 
