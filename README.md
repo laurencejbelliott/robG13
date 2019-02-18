@@ -1,6 +1,9 @@
 # robG13
 A repository for the collaboration of group 13 in completing workshop tasks for the Autonomous Mobile Robotics module of the University of Lincoln's Computer Science BSc course.
 
+#Discord Link
+https://discordapp.com/invite/dk8Eht
+
 # Authors
 * [Laurence Elliott](https://github.com/laurencejbelliott)
 * [Kostadin Yankov](https://github.com/KostadinYankov)
