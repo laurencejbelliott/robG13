@@ -33,9 +33,10 @@ class Follower:
         image = self.bridge.imgmsg_to_cv2(msg, desired_encoding='bgr8')
         hsv = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
         lower_red = numpy.array([0, 120, 100])
-        upper_red = numpy.array([25, 360, 360])
+        upper_red = numpy.array([20, 360, 360])
         mask = cv2.inRange(hsv, lower_red, upper_red)
         colourSegImage = cv2.bitwise_and(image, image, mask=mask)
+        colourSegImage = cv2.medianBlur(colourSegImage, 1)
         h, w, d = image.shape
         search_top = h / 4
         search_bot = 3*h/4 + 20
