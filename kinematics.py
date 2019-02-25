@@ -1,6 +1,6 @@
 
-wheel_radius = .1
-robot_radius = 1
+wheel_radius = .02
+robot_radius = .15
 
 # computing the forward kinematics for a differential drive
 def forward_kinematics(w_l, w_r):
