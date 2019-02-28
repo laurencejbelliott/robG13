@@ -42,6 +42,8 @@ https://discordapp.com/invite/dk8Eht
 2. Open the correct Rviz for this environment:
 * `roslaunch turtlebot_rviz_launchers view_robot.launch`
 
+3. Keyop if must:
+* `roslaunch kobuki_keyop keyop.launch` 
 
 
 
