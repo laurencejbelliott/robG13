@@ -33,8 +33,8 @@ https://discordapp.com/invite/dk8Eht
 6. Starting spyder in this terminal should actually cause any code run through spyder to work on the robot.
 
 # Assignment Environment:
-- sudo apt update
-- sudo apt upgrade
+- `sudo apt update`
+- `sudo apt upgrade`
 
 1. Open environment with the map and poles:
 * `roslaunch uol_turtlebot_simulator object-search-training.launch` 
