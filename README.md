@@ -32,3 +32,16 @@ https://discordapp.com/invite/dk8Eht
 5. You can verify that this has worked successfully by running `rostopic list`.  `roslaunch turtlebot_rviz_launchers view_robot.launch` will launch rviz, which should show us the view from the kinect on the robot.
 6. Starting spyder in this terminal should actually cause any code run through spyder to work on the robot.
 
+# Assignment Environment:
+- sudo apt update
+- sudo apt upgrade
+
+1. Open environment with the map and poles:
+# roslaunch uol_turtlebot_simulator object-search-training.launch 
+
+2. Open the correct Rviz for this environment:
+# roslaunch turtlebot_rviz_launchers view_robot.launch
+
+
+
+
