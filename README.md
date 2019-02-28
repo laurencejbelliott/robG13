@@ -37,10 +37,10 @@ https://discordapp.com/invite/dk8Eht
 - sudo apt upgrade
 
 1. Open environment with the map and poles:
-# roslaunch uol_turtlebot_simulator object-search-training.launch 
+* roslaunch uol_turtlebot_simulator object-search-training.launch 
 
 2. Open the correct Rviz for this environment:
-# roslaunch turtlebot_rviz_launchers view_robot.launch
+* roslaunch turtlebot_rviz_launchers view_robot.launch
 
 
 
